@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="#" method="post" onsubmit="return validar();">
+		<div><strong>Registro de Clientes</strong></div></br>
+		<div>Nombre y Apellido:</div> 
+		<div>
+			<input type="text" id="nombreyapellido">
+			<span id="error_1">campo vacio</span>
+		<div>
+		<div>Tel&eacutefono:</div>
+		<div>
+			<input type="text" id="telefono">
+			<span id="error_2">solo caracteres numericos</span>
+		</div>	
+		<div>E-Mail:</div>
+		<div>
+			<input type="text" id="email">
+			<span id="error_3">formato incorrecto</span>
+		</div>
+		<div>Tipo de Tarjeta</div>
+		<div>
+			<select id="tarjeta">
+				<option value="visa">Visa</option>
+				<option value="master card">Master Card</option>
+				<option value="argenta">Argenta</option>
+				<option value= "null" selected></option>
+			</select>
+			<span id="error_4">no puede ser valor nulo</span>
+		</div>
+		<div>Direcci&oacuten Postal</div>
+		<div>
+			<input type="text" id="direccion_postal">
+			<span id="error_5">campo vacio</span>
+		</div>
+		<div>C&oacutedigo Postal</div>
+		<div>
+			<input type="text" id="codigo_postal">
+			<span id="error_6">solo 4 caracteres numericos</span>
+		</div>
+		<div>Contrase&ntildea</div>
+		<div>
+			<input type="password" id="password">
+			<span id="error_7">minimo 6 caracteres alfanumericos</span>
+		</div>
+		<div>Verificaci&oacuten de Contrase&ntildea</div>
+		<div>
+			<input type="password" id="password_2">
+			<span id="error_8">las contrase&ntildeas son direfentes</span>
+		</div>
+		<input type="submit"> 
+	</form>
+</body>
+</html>

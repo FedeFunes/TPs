@@ -1,0 +1,57 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<form action="form.php" method="post">
+			<span>Text</span>
+			<br>
+			<input type="text" name="texto">
+			<br>
+			<span>Radio</span>
+			<br>
+			<input type="radio" name="radio" id="radio1" value="radio 1"> 
+			<label for="radio1">Radio 1</label>
+			<input type="radio" name="radio" id="radio2" value="radio 2"> 
+			<label for="radio2">Radio 2</label>
+			<br>
+			<span>Checkbox</span>
+			<br>
+			<input type="checkbox" name="checkboxs[]" value="checkbox 1" id="checkbox1"> 
+			<label for="checkbox1">Checkbox 1</label>
+			<input type="checkbox" name="checkboxs[]" value="checkbox 2" id="checkbox2"> 
+			<label for="checkbox2">Checkbox 2</label>
+			<input type="checkbox" name="checkboxs[]" value="checkbox 3" id="checkbox3"> 
+			<label for="checkbox3">Checkbox 3</label>
+			<br>
+			<span>Hidden</span>
+			<br>
+			<input type="hidden" name="hidden" value="hola soy un hidden!">
+			<br>
+			<span>Password</span>
+			<br>
+			<input type="password" name="password">
+			<br>
+			<span>Select</span>
+			<br>
+			<select size="2" name="select">
+				<option value="select 1" selected>Select 1</option>
+				<option value="select 2">Select 2</option>
+				<option value="select 3">Select 3</option>
+			</select>
+			<br>
+			<span>Select Multiple</span>
+			<br>
+			<select multiple size="2" name="opciones[]">
+				<option value="opcion1" selected>Opcion 1</option>
+				<option value="opcion2">Opcion 2</option>
+				<option value="opcion3">Opcion 3</option>
+			</select>
+			<br>
+			<span>TextArea</span>
+			<br>
+			<textarea cols="50" rows="4" name="textarea"></textarea>
+			<br>
+			<input type="submit" name="consultar">
+		</form>
+	</body>
+</html>
