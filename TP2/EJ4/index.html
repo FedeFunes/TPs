@@ -1,120 +1,55 @@
 <html>
-<head>
-	<title></title>
-	<script type="text/javascript">
-
-		var selectModelos = getElementById('selectModelos');
-
-		function cargarModelos (marca) {
-			
-			switch(marca) {
-			    case "ford":  
-			        
-			        var option1 = document.createElement("option");
-		            option1.setAttribute("value", "focus");
-		            var textOption1 = document.createTextNode("Focus");
-		            option1.appendChild(textOption1);
-		            document.getElementById("selectModelos").appendChild(option1);
-							        
-		            var option2 = document.createElement("option");
-		            option2.setAttribute("value", "fiesta");
-		            var textOption2 = document.createTextNode("Fiesta");
-		            option2.appendChild(textOption2);
-		            document.getElementById("selectModelos").appendChild(option2);
-
-		            var option3 = document.createElement("option");
-		            option3.setAttribute("value", "ka");
-		            var textOption3 = document.createTextNode("Ka");
-		            option3.appendChild(textOption3);
-		            document.getElementById("selectModelos").appendChild(option3);
-
-			        break;
-			   
-			    case "chevrolet":
-			        
-			    	var option1 = document.createElement("option");
-		            option1.setAttribute("value", "corsa");
-		            var textOption1 = document.createTextNode("corsa");
-		            option1.appendChild(textOption1);
-		            document.getElementById("selectModelos").appendChild(option1);
-							        
-		            var option2 = document.createElement("option");
-		            option2.setAttribute("value", "aveo");
-		            var textOption2 = document.createTextNode("aveo");
-		            option2.appendChild(textOption2);
-		            document.getElementById("selectModelos").appendChild(option2);
-
-		            var option3 = document.createElement("option");
-		            option3.setAttribute("value", "vectra");
-		            var textOption3 = document.createTextNode("vectra");
-		            option3.appendChild(textOption3);
-		            document.getElementById("selectModelos").appendChild(option3);
-
-			        break;
-
-			    case "fiat":
-			       
-			    	var option1 = document.createElement("option");
-		            option1.setAttribute("value", "palio");
-		            var textOption1 = document.createTextNode("palio");
-		            option1.appendChild(textOption1);
-		            document.getElementById("selectModelos").appendChild(option1);
-							        
-		            var option2 = document.createElement("option");
-		            option2.setAttribute("value", "siena");
-		            var textOption2 = document.createTextNode("siena");
-		            option2.appendChild(textOption2);
-		            document.getElementById("selectModelos").appendChild(option2);
-
-		            var option3 = document.createElement("option");
-		            option3.setAttribute("value", "palio");
-		            var textOption3 = document.createTextNode("palio");
-		            option3.appendChild(textOption3);
-		            document.getElementById("selectModelos").appendChild(option3);
-
-
-			        break;
-
-			    case "toyota":
-			    
-			    	var option1 = document.createElement("option");
-		            option1.setAttribute("value", "hylux");
-		            var textOption1 = document.createTextNode("hylux");
-		            option1.appendChild(textOption1);
-		            document.getElementById("selectModelos").appendChild(option1);
-							        
-		            var option2 = document.createElement("option");
-		            option2.setAttribute("value", "corolia");
-		            var textOption2 = document.createTextNode("corolia");
-		            option2.appendChild(textOption2);
-		            document.getElementById("selectModelos").appendChild(option2);
-
-		            var option3 = document.createElement("option");
-		            option3.setAttribute("value", "avencis");
-		            var textOption3 = document.createTextNode("avencis");
-		            option3.appendChild(textOption3);
-		            document.getElementById("selectModelos").appendChild(option3);
-
-			        break;   
-			} 			
-		}
-
-	</script>
-</head>
+<head></head>
 <body>
-<form>
-	<div>
-		<select onChange="cargarModelos(this.value);">
-			<option value="ford">Ford</option>
-			<option value="chevrolet">Chevrolet</option>
-			<option value="fiat">Fiat</option>
-			<option value="toyota">Toyota</option>
-		</select>
-	</div>
-	<div>	
-		<select id="selectModelos">
-		</select>
-	</div>
+<form name="formulario">
+<select name="marca" onchange="cambia_modelo()">
+<option value="0">Seleccione...</option>
+<option selected="selected" value="1">Ford</option>
+<option value="2">Chevrolet</option>
+<option value="3">Fiat</option>
+<option value="4">Toyota</option>
+</select>
+
+<select name="modelo">
+</select>
 </form>
+
+<script>
+
+var modelos_1=new Array("Fiesta","Focus","Ka")
+var modelos_2=new Array("Aveo","Corsa","Vectra")
+var modelos_3=new Array("Palio","Siena","Punto")
+var modelos_4=new Array("Hilux","Corona","Avencis")
+
+function cambia_modelo(){
+
+	var marca
+	marca = document.formulario.marca[document.formulario.marca.selectedIndex].value
+
+	if (marca != 0) {
+		
+		mis_modelos=eval("modelos_" + marca)
+
+		num_modelos = mis_modelos.length
+		
+		document.formulario.modelo.length = num_modelos
+		
+		for(i=0;i<num_modelos;i++){
+		   document.formulario.modelo.options[i].value=mis_modelos[i]
+		   document.formulario.modelo.options[i].text=mis_modelos[i]
+		}	
+	}else{
+		
+		document.formulario.modelo.length = 1
+		
+		document.formulario.modelo.options[0].value = "-"
+	    document.formulario.modelo.options[0].text = "-"
+	}
+	
+	document.formulario.modelo.options[0].selected = true
+}
+</script>
+
+
 </body>
 </html>

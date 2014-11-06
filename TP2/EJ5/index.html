@@ -1,22 +1,37 @@
 <html>
 <head>
 	<title></title>
-	<script type="text/javascript">
+	<style type="text/css">
+		img {
+			width: 240px;
+		}
 
+	</style>
+	<script type="text/javascript">
+		function mostrar(id) {
+			
+			checkbox = document.getElementById(id);
+			
+			if (checkbox.checked) {
+				document.images[id].style.display = "inline";
+			} else {
+				document.images[id].style.display ="none";
+			}
+		}
 	</script>
 </head>
 <body>
 	<div>
-		<img src="">
-		<input type="checkbox">
+		<img src="img1.jpg">
+		<input type="checkbox" id="0" onClick="mostrar(this.id);" checked="checked">
 	</div>
 	<div>
-		<img src="">
-		<input type="checkbox">
+		<img src="img2.jpg">
+		<input type="checkbox" id="1" onClick="mostrar(this.id);" checked="checked">
 	</div>
 	<div>
-		<img src="">
-		<input type="checkbox">
+		<img src="img3.jpg">
+		<input type="checkbox" id="2" onClick="mostrar(this.id);" checked="checked">
 	</div>
 </body>
 </html>
