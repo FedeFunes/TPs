@@ -1,6 +1,7 @@
 <?php
 include ("conexion.php"); // tiene que estar en todas la paginas
 session_start(); // tiene que estar en todas la paginas
+
 $id=$_SESSION['dni_user'];
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];

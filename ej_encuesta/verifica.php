@@ -1,5 +1,6 @@
 <?php
 include("conexion.php");
+session_start();
 
 $dni = $_POST["dni"];
 $clave = $_POST["clave"];
@@ -22,7 +23,6 @@ $row_2 = mysqli_fetch_array($result_2);
 if($row_1['dni'] == $dni && $row_1['clave'] == $clave && $row_2['dni'] != $dni) {
   	//echo $row_1['dni']." ".$row_1['clave'];
 	//echo "</br>".$row_2['dni'];
-	session_start();
 	$_SESSION['dni_user'] = $dni;
 	header("location: encuesta.php");
 } else {
