@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("conexion.php");
+?>
+
 <html>
 <head>
 	<script type="text/javascript" src="javascript.js"></script>

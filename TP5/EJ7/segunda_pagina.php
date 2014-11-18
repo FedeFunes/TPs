@@ -4,5 +4,5 @@
 		header('location:index.html');
 	}
 
-	echo "hola facu";
+	echo "hola".$_SESSION['idUsuario'];
 ?> 
