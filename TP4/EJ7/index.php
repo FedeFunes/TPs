@@ -11,9 +11,8 @@ for ($i=0; $i < 5 ; $i++) {
 		$min = $pepe[$i];
 	}
 }
-echo "valor maximo:".$max;
-echo "</br>valor min:".$min;
+echo "valor maximo: ".$max;
+echo "</br>valor min: ".$min;
 $resultado = $max*$min;
 echo "</br>valor min * max: ".$resultado;
-
 ?>
